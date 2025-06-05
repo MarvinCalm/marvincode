@@ -95,7 +95,7 @@ body {
   background: rgba(255, 255, 255, 0.911);
   color: #000036;
   padding: 2rem;
-  max-width: 800px;
+  max-width: 850px;
   width: 90%;
   border-radius: 10px;
   position: relative;
@@ -104,10 +104,21 @@ body {
   justify-content: center;
   text-align: center;
 }
+.popup-content h2 {
+  font-family: "Press Start 2P", system-ui;
+}
+
 .popup-content p {
  text-align: justify;
- text-indent: 10px;
- margin: 5px 40px;
+ text-indent: 20px;
+ margin: 15px 40px;
+ line-height: 1.5;
+ font-size: 1.2rem;
+}
+
+.popup-content a {
+  color: #000036;
+  font-size: 2.5rem;
 }
 
 .popup-content .close {
