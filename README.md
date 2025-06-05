@@ -5,6 +5,7 @@ Este é o portfólio pessoal de MarvinCode, desenvolvido para apresentar projeto
 O site serve como uma vitrine online para MarvinCode, permitindo que visitantes explorem seus trabalhos e entrem em contato para oportunidades profissionais.
 
 🚀 Tecnologias Utilizadas
+
 HTML5
 
 CSS3
