@@ -56,3 +56,81 @@ ScrollReveal().reveal('', {
     distance: '90%',
     reset: true
 });
+
+
+
+// ANIMAÇÃO
+
+const canvas = document.getElementById('spotlight');
+const ctx = canvas.getContext('2d');
+
+let width = canvas.width = window.innerWidth;
+let height = canvas.height = window.innerHeight;
+
+window.addEventListener('resize', () => {
+  width = canvas.width = window.innerWidth;
+  height = canvas.height = window.innerHeight;
+});
+
+class FadingBall {
+  constructor() {
+    this.reset();
+  }
+
+  reset() {
+    this.x = Math.random() * width;
+    this.y = Math.random() * height;
+    this.radius = 30 + Math.random() * 30; // bolas menores
+    this.vx = (Math.random() - 0.5) * 0.2;
+    this.vy = (Math.random() - 0.5) * 0.2;
+    this.life = 0;
+    this.maxLife = 300 + Math.random() * 200; // tempo até sumir
+    this.opacity = 0;
+    this.color = `255, 255, 255`;
+  }
+
+  update() {
+    this.x += this.vx;
+    this.y += this.vy;
+    this.life++;
+
+    // suaviza entrada e saída
+    if (this.life < 60) {
+      this.opacity = this.life / 60 * 0.05; // fade in
+    } else if (this.life > this.maxLife - 60) {
+      this.opacity = ((this.maxLife - this.life) / 60) * 0.05; // fade out
+    } else {
+      this.opacity = 0.05;
+    }
+
+    // reinicia quando acabar a "vida"
+    if (this.life > this.maxLife) {
+      this.reset();
+    }
+  }
+
+  draw(ctx) {
+    ctx.save();
+    ctx.beginPath();
+    ctx.fillStyle = `rgba(${this.color}, ${this.opacity})`;
+    ctx.shadowColor = `rgba(${this.color}, 1)`;
+    ctx.shadowBlur = 40;
+    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+  }
+}
+
+// poucas bolas
+const balls = Array.from({ length: 4 }, () => new FadingBall());
+
+function animate() {
+  ctx.clearRect(0, 0, width, height);
+  balls.forEach(ball => {
+    ball.update();
+    ball.draw(ctx);
+  });
+  requestAnimationFrame(animate);
+}
+
+animate();
