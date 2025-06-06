@@ -48,3 +48,11 @@ ScrollReveal().reveal('.links', {
     distance: '90%',
     reset: true
 });
+
+ScrollReveal().reveal('', {
+    origin: 'bottom',
+    duration: 1800,
+    delay: 2000,      
+    distance: '90%',
+    reset: true
+});
