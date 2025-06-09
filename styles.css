@@ -167,8 +167,7 @@ canvas#spotlight {
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: center;
-  animation: aparecerFooter 2s ease-out alternate;
+  justify-content: center;  
   z-index: 100;
   text-align: center;
   
@@ -178,17 +177,18 @@ canvas#spotlight {
   text-align: center;
   font-size: 13px;
   filter: drop-shadow(5px 5px 10px rgba(0, 0, 27, 0.918));
-  
+  animation: aparecerFooter 5s ease-out alternate;
 }
 
 @keyframes aparecerFooter {
-  from {
+  0% {
     opacity: 0;
-   
   }
-  to {
-    opacity: 1;
-    
+  50%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
   }
 }
 
