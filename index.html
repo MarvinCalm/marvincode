@@ -14,19 +14,19 @@
     <div class="text-section">
       <h1>Hi, I’m <br><span>MarvinCode.</span></h1>
       <!-- <p>I’m a web developer.</p> -->
-      <div class="button">
-        <button onclick="openPopup('contact')">Contact Me</button>
-      </div>
-      <div class="links">
-        <a href="#" onclick="openPopup('about')">About</a>
-        <a href="#" onclick="openPopup('projects')">Projects</a>
+      <div class="image-section">
+        <img src="images/marvincode.png" alt="MarvinCode">
       </div>
     </div>
-    <div class="image-section">
-      <img src="images/marvincode.png" alt="MarvinCode">
+    <div class="button">
+      <button onclick="openPopup('contact')">Contact Me</button>
     </div>
+    <div class="links" style="opacity: 1;">
+      <a href="#" onclick="openPopup('about')">About</a>
+      <a href="#" onclick="openPopup('projects')">Projects</a>
+    </div>      
   </div>
-
+  
   <div id="popup" class="popup hidden">
     <div class="popup-content">
       <span class="close" onclick="closePopup()">&times;</span>
@@ -35,7 +35,15 @@
   </div>
   <canvas id="spotlight"></canvas>
   <script src="script.js"></script>
+
+  <footer id="footer">
+    <div class="text-footer">
+      <p style="margin-top: 0; margin-bottom: 0;"> &copy MarvinCode - 2025 Todos os direitos reservados.</p>
+      <p>"Quem segue a justiça e a lealdade encontra vida, justiça e honra." - Provérbios 21:21 (NAA)</p>
+    </div>
+  </footer>
 </body>
+
 </html>
 
 

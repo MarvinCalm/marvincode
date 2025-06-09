@@ -6,15 +6,22 @@ body {
   /* background-color: #0d0d1a; */
   background: radial-gradient(#0d0d1a 65%, #00004e);
   color: white;
-  background: grad;
+  background: grad;  
 }
 
 .container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   height: 100vh;
   padding: 0 20%;
+}
+
+.text-section {
+  display: flex;
+  margin: 3rem 0;
+  align-items: center;
 }
 
 .text-section h1 {
@@ -36,9 +43,9 @@ body {
 
 .button button {
   display: inline-block;
-  margin-top: 2rem;
   padding: 0.75rem 1.5rem;
-  font-size: 1.7rem;
+  margin: 1.5rem 0;
+  font-size: 1.8rem;
   border: 2px solid white;
   background: none;
   color: white;
@@ -53,28 +60,27 @@ body {
 }
 
 
-.text-section .links {
-  margin-top: 2rem;
+.links {
   display: flex;
   gap: 2rem;
 }
 
-.text-section .links a {
+.links a {
   color: white;
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 500;
   font-family: "Press Start 2P", system-ui;
   text-shadow: 5px 5px 2px #1c1c5e;
   transition: transform 0.3s ease-in-out;
 }
-.text-section .links a:hover {
+.links a:hover {
   transform: scale(1.1);
 }
 
 .image-section img {
   border-radius: 50%;
-  max-width: 450px;
+  max-width: 320px;
   width: 100%;
   height: auto;
   filter: drop-shadow(5px 5px 10px rgba(0, 0, 27, 0.918));
@@ -94,20 +100,25 @@ body {
 }
 
 .popup-content {
-  background: rgba(255, 255, 255, 0.911);
+  background: rgba(255, 255, 255, 0.850);
   color: #000036;
   padding: 2rem;
   max-width: 850px;
-  width: 90%;
+  width: 85%;
   border-radius: 10px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.850);
 }
 .popup-content h2 {
   font-family: "Press Start 2P", system-ui;
+  justify-content: center;
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2rem;
 }
 
 .popup-content p {
@@ -116,19 +127,24 @@ body {
  margin: 15px 40px;
  line-height: 1.5;
  font-size: 1.2rem;
+ justify-content: center;
 }
 
 .popup-content a {
   color: #000036;
-  font-size: 2.5rem;
+  font-size: 4rem;
+  margin: 0 1rem;
+}
+.popup-content a:hover {
+  color: #000036e7;
 }
 
 .popup-content .close {
   position: absolute;
-  top: 10px;
-  right: 20px;
+  top: 5px;
+  right: 25px;
   cursor: pointer;
-  font-size: 4rem;
+  font-size: 5rem;
 }
 
 .hidden {
@@ -145,6 +161,37 @@ canvas#spotlight {
 }
 
 
+#footer {   
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  animation: aparecerFooter 2s ease-out alternate;
+  z-index: 100;
+  text-align: center;
+  
+}
+.text-footer {
+  justify-content: center;
+  text-align: center;
+  font-size: 13px;
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 27, 0.918));
+  
+}
+
+@keyframes aparecerFooter {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* RESPONSIVIDADE */
 
 /* Responsividade para telas menores que 1200px (tablets grandes e notebooks pequenos) */
@@ -154,7 +201,7 @@ canvas#spotlight {
   }
 
   .text-section h1 {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 
   .button button {
@@ -166,26 +213,33 @@ canvas#spotlight {
   }
 
   .image-section img {
-    max-width: 400px;
+    max-width: 280px;
+  }  
+  .text-footer {
+    font-size: 0.8rem;
   }
 }
+
+
 
 /* Responsividade para tablets médios */
 @media (max-width: 992px) {
   .container {
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
-    padding: 2rem;
+    padding: 1.8em;
     height: auto;
   }
 
   .image-section {
     margin-top: 2rem;
   }
-
+  .text-section {
+    flex-direction: column;
+  }
   .text-section h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   .text-section p {
@@ -193,72 +247,97 @@ canvas#spotlight {
   }
 
   .button button {
+    font-size: 1.8rem;
+    margin: 2.2rem 0;
+  }
+  .links a {
     font-size: 1.3rem;
   }
-
-  .text-section .links {
+  .links {
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 1.4rem;
+    gap: 2rem;
   }
 
   .image-section img {
-    max-width: 500px;
+    max-width: 380px;
+  }
+  .text-footer {
+    font-size: 1rem;
   }
 }
 
 /* Responsividade para celulares grandes */
 @media (max-width: 768px) {
+  .text-section {
+    flex-direction: column;
+  }
   .text-section h1 {
     font-size: 3rem;
   }
 
   .text-section p {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .button button {
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding: 0.6rem 1.2rem;
   }
 
-  .text-section .links {
+  .links {
     gap: 2rem;
   }
 
-  .text-section .links a {
-    font-size: 1.3rem;
+  .links a {
+    font-size: 1.5rem;
     
+  }
+  .popup-content {
+    padding: 1.2rem;
+    font-size: 1.2rem;
+  }
+  .popup-content p {
+    font-size: 1.5rem;
+    margin: 15px 0;
   }
 
   .image-section img {
     max-width: 400px;
   }
+  .text-footer {
+    font-size: 1rem;
+  }
 }
 
 /* Responsividade para celulares pequenos */
 @media (max-width: 480px) {
+  .container {
+    justify-content: space-between;
+  }
+  .text-section {
+    flex-direction: column;
+    margin: 0;
+  }
+
   .text-section h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
 
   .text-section p {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
   .button button {
-    font-size: 1.2rem;
-    padding: 0.2rem 1rem;
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem;
   }
 
-  .text-section .links {
-    flex-direction: column;
+  .links {
     gap: 1.5rem;
   }
 
-  .text-section .links a {
-    font-size: 1.2rem;
-    
+  .links a {
+    font-size: 1.2rem;    
   }
 
   .image-section img {
@@ -269,12 +348,21 @@ canvas#spotlight {
     padding: 1rem;
     font-size: 0.8rem;
   }
+  .popup-content h2 {
+    font-size: 1.5rem;
+  }
   .popup-content p {
-    font-size: 1.1rem;
-    margin: 2px 5px;
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  .popup-content a {
+    font-size: 3rem;
   }
 
   .popup-content .close {
-    font-size: 3rem;
+    font-size: 3.5rem;
+  }
+  .text-footer {
+    font-size: 0.6rem;
   }
 }
