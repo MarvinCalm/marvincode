@@ -1,10 +1,11 @@
 MarvinCode
+
 Este é o portfólio pessoal de MarvinCode, desenvolvido para apresentar projetos, habilidades e fornecer informações de contato.
 
-📌 Sobre
+📌 Sobre:
 O site serve como uma vitrine online para MarvinCode, permitindo que visitantes explorem seus trabalhos e entrem em contato para oportunidades profissionais.
 
-🚀 Tecnologias Utilizadas
+🚀 Tecnologias Utilizadas:
 
 HTML5
 
