@@ -37,7 +37,7 @@ ScrollReveal().reveal('.button', {
     origin: 'bottom',
     duration: 1000,
     delay: 2000,      
-    distance: '80%',
+    distance: '70%',
     reset: true
 });
 
