@@ -13,7 +13,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding: 0 20%;
+  padding: 0 5%;
 }
 
 .text-section {
@@ -587,7 +587,7 @@ canvas#spotlight {
 /* Responsividade para celulares pequenos */
 @media (max-width: 520px) {
   .text-section {
-    margin: 2rem 0 1rem 0;
+    margin: .4rem 0 1rem 0;
   }
 
   .text-section h1 {
@@ -600,11 +600,11 @@ canvas#spotlight {
     max-width: 100px;
   }
   .propaganda h3 {
-    font-size: .8rem;
-    margin: 2rem 0 1rem 0;
+    font-size: .9rem;
+    margin: 1.5rem 0 1rem 0;
   }
   .propaganda p {
-    font-size: .7rem;
+    font-size: .8rem;
     margin: 0;
     margin: 0 0 1rem 0;
   } 
