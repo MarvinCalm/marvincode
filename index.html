@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MarvinCode - Portfólio</title>
+  <title>MarvinCode - Serviços de Desenvolvimento Web</title>
   <link rel="shortcut icon" href="images/perfil.ico">
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -12,24 +12,30 @@
 <body>
   <div class="container">
     <div class="text-section">
-      <h1>Hi, I’m <br><span>MarvinCode.</span></h1>
-      <!-- <p>I’m a web developer.</p> -->
-      <div class="image-section">
-        <img src="images/marvincode.png" alt="MarvinCode">
-      </div>
+      <h1>Olá, eu sou <br><span>MarvinCode.</span></h1>
+      <img class="image-section" src="images/marvincode.png" alt="MarvinCode">
     </div>
+    <div class="propaganda">
+      <h3>CRIAÇÃO DE SITES RÁPIDOS, MODERNOS E FOCADOS EM RESULTADOS.</h3>
+      <p>Desenvolvimento de sites personalizados que valorizam a sua marca, com visual moderno, fácil navegação e foco em resultados.</p>
+          
+    </div>
+
+    <img src="images/web-page-propaganda.svg" alt="Um rapaz utilizando um laptop, acessando uma webpage." class="propaganda-web">
+    
     <div class="button">
-      <button onclick="openPopup('contact')">Contact Me</button>
+      <button onclick="openPopup('contact')">Entre em Contato <i class="fa-solid fa-mobile-retro"></i></button>
     </div>
     <div class="links" style="opacity: 1;">
-      <a href="#" onclick="openPopup('about')">About</a>
-      <a href="#" onclick="openPopup('projects')">Projects</a>
+      <a href="#" onclick="openPopup('about')">Sobre</a>
+      <a href="#" onclick="openPopup('services')">Serviços</a>
+      <a href="#" onclick="openPopup('projects')">Projetos</a>
     </div>      
   </div>
   
   <div id="popup" class="popup hidden">
     <div class="popup-content">
-      <span class="close" onclick="closePopup()">&times;</span>
+      <span class="close" onclick="closePopup()"><i class="fa-solid fa-xmark"></i></span>
       <div id="popup-body"></div>
     </div>
   </div>
@@ -45,5 +51,4 @@
 </body>
 
 </html>
-
 

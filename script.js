@@ -3,11 +3,70 @@ function openPopup(section) {
   const popupBody = document.getElementById('popup-body');
 
   if (section === 'contact') {
-    popupBody.innerHTML = '<h2>Contact Me</h2><a title="E-mail" target="_blank" href="mailto:viniiciussd@hotmail.com?subject=Olá&body=Vim pelo site e quero saber mais."><i class="fa-solid fa-envelope"></i></a> <a title="LinkedIn" target="_blank" href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"><i class="fa-brands fa-linkedin"></i></a>';
+    popupBody.innerHTML = `
+      <h2>Entre em Contato</h2>
+      <a title="E-mail" target="_blank" href="mailto:viniiciussd@hotmail.com?subject=Olá&body=Vim pelo site e quero saber mais sobre seus serviços.">
+        <i class="fa-solid fa-envelope"></i>
+      </a> 
+      <a title="LinkedIn" target="_blank" href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a title="Whatsapp" target="_blank" href="https://api.whatsapp.com/send/?phone=5561992701884&text=Ol%C3%A1%2C+vim+pelo+site+e+quero+fazer+um+or%C3%A7amento.&type=phone_number&app_absent=0">
+        <i class="fa-brands fa-square-whatsapp"></i>
+      </a>
+    `;
   } else if (section === 'about') {
-    popupBody.innerHTML = '<h2>ABOUT</h2><p>Oi! Sou o Marcos Vinícius, mas pode me chamar de Marvin. Nasci no dia do Natal de 1994 🎄😅. Sou cristão, casado e ainda sem filhos. Me considero uma pessoa mais na minha, que valoriza a simplicidade e vai direto ao ponto. Gosto de resolver as coisas de forma prática e sem enrolação. Curto tecnologia, jogos e tudo o que envolve esse universo digital. Estou aprendendo front-end e acho incrível como algumas linhas de código viram algo visual e interativo na tela. Sigo sempre aprendendo e tentando evoluir a cada projeto.</p>';
+    popupBody.innerHTML = `
+      <h2>SOBRE MIM</h2>
+      <p>Olá! Sou MarvinCode, um desenvolvedor web iniciante apaixonado por transformar ideias em realidade digital. Com foco em HTML5, CSS3 e JavaScript, crio soluções web simples, porém eficazes e visualmente atraentes. Meu objetivo é ajudar pequenos negócios e indivíduos a estabelecerem sua presença online com qualidade e acessibilidade.</p>
+      
+      <p>Como iniciante na área, dedico-me a cada projeto com entusiasmo e atenção aos detalhes, garantindo que o resultado final atenda às suas expectativas e necessidades. Acredito que a simplicidade pode ser poderosa, e meu trabalho reflete essa filosofia, entregando projetos limpos, funcionais e fáceis de usar.</p>
+      
+      <p>Estou sempre aprendendo e evoluindo, buscando as melhores práticas para oferecer um serviço de excelência. Se você precisa de uma landing page, um portfólio online ou um website simples, estou pronto para ajudar a construir sua presença digital de forma eficiente e descomplicada.</p>
+    `;
+  } else if (section === 'services') {
+    popupBody.innerHTML = `
+      <h2>MEUS SERVIÇOS</h2>
+      <p>Ofereço soluções de desenvolvimento web sob medida para suas necessidades, com foco em projetos simples e eficazes, ideais para quem está começando ou busca uma presença online direta e funcional.</p>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <h4>🚀 Landing Pages</h4>
+          <p>Páginas de alta conversão, projetadas para um objetivo específico, como capturar leads, promover um produto ou serviço, ou divulgar um evento.</p>
+        </div>
+        
+        <div class="service-card">
+          <h4>💼 Portfólios Online</h4>
+          <p>Portfólios personalizados que destacam seus projetos mais importantes, sua experiência e suas informações de contato.</p>
+        </div>
+        
+        <div class="service-card">
+          <h4>🌐 Websites em Geral</h4>
+          <p>Websites simples e responsivos para pequenos negócios, projetos pessoais ou iniciativas específicas, usando HTML5, CSS3 e JavaScript.</p>
+        </div>
+      </div>
+      
+      <h3>Por que escolher meus serviços?</h3>
+      <ul>
+        <li><strong>Qualidade e Simplicidade:</strong> Projetos bem feitos, sem complexidades desnecessárias.</li>
+        <li><strong>Foco no Cliente:</strong> Entendimento das suas necessidades para entregar a melhor solução.</li>
+        <li><strong>Preço Acessível:</strong> Soluções eficazes que cabem no seu orçamento.</li>
+        <li><strong>Suporte:</strong> Acompanhamento e suporte para garantir o bom funcionamento do seu site.</li>
+      </ul>
+      
+      <p><strong>Vamos construir sua presença digital juntos! 🚀</strong></p>
+    `;
   } else if (section === 'projects') {
-    popupBody.innerHTML = '<h2>PROJECTS</h2><h4>Loja Deblando Mais Som - deblandomais.com.br</h4><p>Site criado para a Loja Deblando Mais Som, com o objetivo de apresentar produtos e serviços de som automotivo, acessórios e instalações. A plataforma destaca ofertas, contatos e redes sociais, proporcionando uma navegação simples e moderna para atrair clientes e facilitar o atendimento.</p><a title="Acesse!" href="https://deblandomais.com.br/" target="_blank"><img style="border-radius: 10px; width: 95%; margin: 5px 2px;" src="images/deblandomais.jpg" alt="Print Screen da pagina web Deblando Mais Som"></a>';
+    popupBody.innerHTML = `
+      <img class="project-image" src="images/capa-marvincode.svg" alt="Exemplo de Landing Page">
+      <p>Aqui estão alguns dos projetos que desenvolvi, demonstrando minhas habilidades em HTML5, CSS3 e JavaScript. Cada projeto foi criado com foco em funcionalidade, design responsivo e experiência do usuário.</p>
+
+      <h4>Loja Deblando Mais Som - deblandomais.com.br</h4>
+      <p>Site criado para a Loja Deblando Mais Som, com o objetivo de apresentar produtos e serviços de som automotivo, acessórios e instalações. A plataforma destaca ofertas, contatos e redes sociais, proporcionando uma navegação simples e moderna para atrair clientes e facilitar o atendimento.</p>
+      <a title="Confira! - deblandomais.com.br" href="https://deblandomais.com.br/" target="_blank"><img class="project-image" src="images/deblandomais.jpg" alt=Página Web da Loja Deblando Mais Som"></a>
+      
+    `;
+    
   }
 
   popup.classList.remove('hidden');
@@ -17,15 +76,7 @@ function closePopup() {
   document.getElementById('popup').classList.add('hidden');
 }
 
-
 // SCROLLREVEAL
-ScrollReveal().reveal('.image-section', {
-    origin: 'right',
-    duration: 3000,
-    delay: 800,
-    distance: '70%',
-    reset: true
-});
 ScrollReveal().reveal('h1', {
     origin: 'top',
     duration: 1200,
@@ -33,19 +84,42 @@ ScrollReveal().reveal('h1', {
     distance: '20%',
     reset: true
 });
+ScrollReveal().reveal('.image-section', {
+    origin: 'right',
+    duration: 1500,
+    delay: 800,
+    distance: '20%',
+    reset: true
+});
+ScrollReveal().reveal('.propaganda', {
+    origin: 'top',
+    duration: 1900,
+    delay: 1500,      
+    distance: '20%',
+    reset: true
+});
+ScrollReveal().reveal('.propaganda-web', {
+    origin: 'bottom',
+    duration: 1900,
+    delay: 1500,      
+    distance: '20%',
+    reset: true
+});
 ScrollReveal().reveal('.button', {
     origin: 'bottom',
-    duration: 1000,
-    delay: 2000,      
-    distance: '70%',
+    duration: 1200,
+    delay: 3000,      
+    distance: '20%',
+    reset: true
+});
+ScrollReveal().reveal('.links', {
+    duration: 1300,
+    delay: 3300,
     reset: true
 });
 
-ScrollReveal().reveal('.links', {
-    duration: 1300,
-    delay: 3000,
-    reset: true
-});
+
+
 
 
 
@@ -124,3 +198,4 @@ function animate() {
 }
 
 animate();
+

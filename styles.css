@@ -3,10 +3,8 @@
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  /* background-color: #0d0d1a; */
   background: radial-gradient(#0d0d1a 65%, #00004e);
   color: white;
-  background: grad;  
 }
 
 .container {
@@ -20,32 +18,64 @@ body {
 
 .text-section {
   display: flex;
-  margin: 3rem 0;
+  margin: 0 0 .9rem 0;
   align-items: center;
 }
 
 .text-section h1 {
-  font-size: 6rem;
-  line-height: 1.2;
+  font-size: 1.7rem;
+  line-height: 1;
   text-shadow: 5px 5px 2px #1c1c5e;
 }
 
 .text-section span {
   font-weight: bold;
   color: white;
-  
+  font-size: 3rem;
+}
+.image-section {
+  border-radius: 50%;
+  max-width: 180px;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 27, 0.918));
 }
 
-.text-section p {
-  margin-top: 1rem;
-  font-size: 1.25rem;  
+.propaganda {  
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  margin: 0 0 .5rem 0;
+  max-width: 850px;
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 27, 0.918));
+}
+.propaganda h3 {
+  font-size: 1.3rem;
+  margin: .6rem 0 0 0 ;
+}
+.propaganda p {
+  font-size: 1.2rem;
+  margin: .4rem 0 0 0;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+
+
+.propaganda-web {
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+  max-width: 850px;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 27, 0.918));
 }
 
 .button button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
   margin: 1.5rem 0;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   border: 2px solid white;
   background: none;
   color: white;
@@ -59,16 +89,16 @@ body {
   transform: scale(1.02);
 }
 
-
 .links {
   display: flex;
-  gap: 2rem;
+  gap: 2.3rem;
+  margin-bottom: 2rem;
 }
 
 .links a {
   color: white;
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 500;
   font-family: "Press Start 2P", system-ui;
   text-shadow: 5px 5px 2px #1c1c5e;
@@ -76,14 +106,6 @@ body {
 }
 .links a:hover {
   transform: scale(1.1);
-}
-
-.image-section img {
-  border-radius: 50%;
-  max-width: 320px;
-  width: 100%;
-  height: auto;
-  filter: drop-shadow(5px 5px 10px rgba(0, 0, 27, 0.918));
 }
 
 .popup {
@@ -100,19 +122,23 @@ body {
 }
 
 .popup-content {
-  background: rgba(255, 255, 255, 0.850);
+  background: rgba(255, 255, 255, 0.911);
   color: #000036;
   padding: 2rem;
-  max-width: 850px;
-  width: 85%;
+  max-width: 1200px;
+  width: 100%;
   border-radius: 10px;
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   border: 1px #000036 solid;
+  max-height: 90vh;
+  overflow-y: auto;
 }
+
 .popup-content h2 {
   font-family: "Press Start 2P", system-ui;
   justify-content: center;
@@ -121,19 +147,48 @@ body {
   font-size: 2rem;
 }
 
+.popup-content h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  margin: 1.5rem 0 0.5rem 0;
+  font-size: 1.4rem;
+  color: #000036;
+}
+
+.popup-content h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  margin: 2rem 0 0.5rem 0;
+  font-size: 1.4rem;
+  color: #000036;
+}
+
 .popup-content p {
  text-align: justify;
  text-indent: 20px;
  margin: 15px 40px;
  line-height: 1.5;
- font-size: 1.2rem;
+ font-size: 1.1rem;
+ font-weight: 500;
  justify-content: center;
+}
+
+.popup-content ul {
+  text-align: left;
+  margin: 15px 40px;
+  line-height: 1.5;
+  font-size: 1.1rem;
+}
+
+.popup-content li {
+  margin: 0.5rem 0;
 }
 
 .popup-content a {
   color: #000036;
   font-size: 4rem;
-  margin: 0 1rem;
+  margin: 0 .5rem;
+  text-decoration: none;
 }
 .popup-content a:hover {
   color: #000036e7;
@@ -141,14 +196,57 @@ body {
 
 .popup-content .close {
   position: absolute;
-  top: 5px;
-  right: 25px;
+  top: 0;
+  right: 8px;
   cursor: pointer;
-  font-size: 5rem;
+  font-size: 4rem;
+  z-index: 999;
 }
 
 .hidden {
   display: none;
+}
+
+.project-image {
+  border-radius: 10px;
+  width: 95%;
+  margin: 10px 2px;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.281);
+  border: 1px solid rgba(255, 255, 255, 0.39);
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.service-card h4 {
+  color: #000036;
+  margin-bottom: 1rem;
+}
+
+.service-card p {
+  color: #000036;
+  font-size: 1rem;
+  text-align: center;
+  text-indent: 0;
+  margin: 0;
 }
 
 canvas#spotlight {
@@ -160,20 +258,19 @@ canvas#spotlight {
   z-index: -1;
 }
 
-
 #footer {   
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: center;  
-  z-index: 100;
+  justify-content: center;
   text-align: center;  
 }
 .text-footer {
   justify-content: center;
   text-align: center;
+  line-height: .8;
   font-size: 13px;
   filter: drop-shadow(5px 5px 10px rgba(0, 0, 27, 0.918));
   animation: aparecerFooter 5s ease-out;
@@ -195,228 +292,494 @@ canvas#spotlight {
 
 /* Responsividade para telas menores que 1200px (tablets grandes e notebooks pequenos) */
 @media (max-width: 1300px) {
-  .container {
-    padding: 0 10%;
+.text-section {
+    margin: .8rem 0 0 0;
   }
 
   .text-section h1 {
-    font-size: 4rem;
+    font-size: 1.5rem;
   }
-
-  .button button {
-    font-size: 1.4rem;
+  .text-section span {
+    font-size: 2rem;
   }
-
-  .text-section .links a {
-    font-size: 1.2rem;
-  }
-
-  .image-section img {
-    max-width: 280px;
-  }  
-  .text-footer {
-    font-size: 0.8rem;
-  }
-}
-
-
-
-/* Responsividade para tablets médios */
-@media (max-width: 992px) {
-  .container {
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    padding: 1.8em;
-    height: auto;
-  }
-
   .image-section {
-    margin-top: 0;
+    max-width: 150px;
   }
-  .text-section {
-    flex-direction: column;
+  .propaganda h3 {
+    font-size: 1.2rem;
+    margin: 1rem 0 0 0;
   }
-  .text-section h1 {
-    font-size: 2.5rem;
-  }
-
-  .text-section p {
-    font-size: 1.1rem;
-  }
+  .propaganda p {
+    font-size: .9rem;
+    margin: 0;
+  }  
 
   .button button {
     font-size: 1.5rem;
-    margin: 2.2rem 0;
-  }
-  .links a {
-    font-size: 1.2rem;
-  }
-  .links {
-    justify-content: center;
-    gap: 2rem;
+    padding: 0.5rem 1rem;
+    margin: 1.2rem 0 1.2rem 0;
   }
 
-  .image-section img {
-    max-width: 300px;
+  .links {
+    gap: 1.5rem;
+  }
+
+  .links a {
+    font-size: 1.2rem;    
+  }
+
+  .popup-content {
+    padding: 1rem;
+    font-size: 0.8rem;
+    max-width: 90%;
+    max-height: 90vh;
+  }
+  .popup-content h2 {
+    font-size: 1.5rem;
+    margin: 2rem 0 1.2rem 0;
+  }
+  .popup-content h3 {
+    font-size: 1rem;
+    margin: .2rem 0;
+  }
+  .popup-content h4 {
+    font-size: 1rem;
+  }
+  .popup-content p {
+    font-size: 1rem;
+    margin: .5rem 0;
+  }
+  .popup-content a {
+    font-size: 3rem;
+  }
+
+  .popup-content .close {
+    font-size: 2.5rem;
+    background: rgba(255, 255, 255, 0.829);
+    border-radius: 0 0 0 10px;
+    padding: 10px;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+  }
+  .service-card {
+    padding: 0;
+  }
+  .service-card p {
+    font-size: .9rem;
+    margin: .2rem 0;
+  }
+  .service-card h4 {
+    font-size: 1rem;
+    margin: .2rem 0;
+  }
+  .popup-content ul {
+    font-size: .9rem;
+    margin: .2rem 0;    
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: .7rem;
+    margin: .5rem 0;
   }
   .text-footer {
-    font-size: 0.7rem;
+    font-size: .8rem;
+  }
+}
+
+/* Responsividade para tablets médios */
+@media (max-width: 992px) {
+  .text-section {
+    margin: .9rem 0 0 0;
+  }
+
+  .text-section h1 {
+    font-size: 2rem;
+  }
+  .text-section span {
+    font-size: 2.5rem;
+  }
+  .image-section {
+    max-width: 180px;
+  }
+  .propaganda h3 {
+    font-size: 1.5rem;
+    margin: 2rem 0 0 0;
+  }
+  .propaganda p {
+    font-size: 1.2rem;
+    margin: .8rem 0 1.5rem 0;
+  }  
+
+  .button button {
+    font-size: 1.7rem;
+    padding: 0.5rem 1rem;
+    margin: 2.5rem 0 1.5rem 0;
+  }
+
+  .links {
+    gap: 1.5rem;
+  }
+
+  .links a {
+    font-size: 1.2rem;    
+  }
+
+  .popup-content {
+    padding: 1rem;
+    font-size: 0.8rem;
+    max-width: 90%;
+    max-height: 90vh;
+  }
+  .popup-content h2 {
+    font-size: 1.2rem;
+    margin: 4rem 0 1rem 0;
+  }
+  .popup-content h3 {
+    font-size: 1rem;
+    margin: .2rem 0;
+  }
+  .popup-content h4 {
+    font-size: 1rem;
+  }
+  .popup-content p {
+    font-size: 1rem;
+    margin: .5rem 0;
+  }
+  .popup-content a {
+    font-size: 2.5rem;
+  }
+
+  .popup-content .close {
+    font-size: 2.5rem;
+    background: rgba(255, 255, 255, 0.829);
+    border-radius: 0 0 0 10px;
+    padding: 10px;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+  }
+  .service-card {
+    padding: 0;
+  }
+  .service-card p {
+    font-size: .9rem;
+    margin: .2rem 0;
+  }
+  .service-card h4 {
+    font-size: 1rem;
+    margin: .2rem 0;
+  }
+  .popup-content ul {
+    font-size: .9rem;
+    margin: .2rem 0;    
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: .7rem;
+    margin: .5rem 0;
+  }
+  .text-footer {
+    font-size: 1rem;
   }
 }
 
 /* Responsividade para celulares grandes */
 @media (max-width: 768px) {
   .text-section {
-    flex-direction: column;
-  }
-  .text-section h1 {
-    font-size: 2.5rem;
-    margin: 0.5rem 0;
+    margin: .8rem 0 0 0;
   }
 
-  .text-section p {
+  .text-section h1 {
     font-size: 1.5rem;
   }
+  .text-section span {
+    font-size: 2rem;
+  }
+  .image-section {
+    max-width: 150px;
+  }
+  .propaganda h3 {
+    font-size: 1.1rem;
+    margin: 2rem 0 0 0;
+  }
+  .propaganda p {
+    font-size: 1.1rem;
+    margin: .8rem 0 1.5rem 0;
+  }  
 
   .button button {
     font-size: 1.5rem;
-    padding: 0.6rem 1.2rem;
+    padding: 0.5rem 1rem;
+    margin: 2.5rem 0 1.5rem 0;
   }
 
   .links {
-    gap: 2rem;
+    gap: 1.4rem;
   }
 
   .links a {
-    font-size: 1.2rem;
-    
-  }
-  .popup-content {
-    padding: 1.2rem;
-    font-size: 1.2rem;
-  }
-  .popup-content p {
-    font-size: 1.5rem;
-    margin: 15px 0;
+    font-size: 1.1rem;    
   }
 
-  .image-section img {
-    max-width: 300px;
+  .popup-content {
+    padding: 1rem;
+    font-size: 0.8rem;
+    max-width: 90%;
+    max-height: 90vh;
+  }
+  .popup-content h2 {
+    font-size: 1.2rem;
+    margin: 4rem 0 1rem 0;
+  }
+  .popup-content h3 {
+    font-size: 1rem;
+    margin: .2rem 0;
+  }
+  .popup-content h4 {
+    font-size: 1rem;
+  }
+  .popup-content p {
+    font-size: 1rem;
+    margin: .5rem 0;
+  }
+  .popup-content a {
+    font-size: 2.5rem;
+  }
+
+  .popup-content .close {
+    font-size: 2.5rem;
+    background: rgba(255, 255, 255, 0.829);
+    border-radius: 0 0 0 10px;
+    padding: 10px;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+  }
+  .service-card {
+    padding: 0;
+  }
+  .service-card p {
+    font-size: .9rem;
+    margin: .2rem 0;
+  }
+  .service-card h4 {
+    font-size: 1rem;
+    margin: .2rem 0;
+  }
+  .popup-content ul {
+    font-size: .9rem;
+    margin: .2rem 0;    
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: .7rem;
+    margin: .5rem 0;
   }
   .text-footer {
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
 }
 
 /* Responsividade para celulares pequenos */
 @media (max-width: 520px) {
-  .container {
-    justify-content: space-between;
-  }
   .text-section {
-    flex-direction: column;
-    margin: 0;
+    margin: 2rem 0 1rem 0;
   }
 
   .text-section h1 {
+    font-size: 1.1rem;
+  }
+  .text-section span {
+    font-size: 1.4rem;
+  }
+  .image-section {
+    max-width: 100px;
+  }
+  .propaganda h3 {
+    font-size: .8rem;
+    margin: 2rem 0 1rem 0;
+  }
+  .propaganda p {
+    font-size: .7rem;
+    margin: 0;
+    margin: 0 0 1rem 0;
+  } 
+
+  .button button {
+    font-size: .9rem;
+    padding: 0.5rem 1rem;
+    margin: 2rem 0 1rem 0;
+  }
+
+  .links {
+    gap: 1.3rem;
+  }
+
+  .links a {
+    font-size: .6rem;    
+  }
+
+  .popup-content {
+    padding: 1rem;
+    font-size: 0.8rem;
+    max-width: 90%;
+    max-height: 90vh;
+  }
+  .popup-content h2 {
+    font-size: .9rem;
+    margin: 4rem 0 1rem 0;
+  }
+  .popup-content h3 {
+    font-size: .8rem;
+    margin: .2rem 0;
+  }
+  .popup-content h4 {
+    font-size: .7rem;
+  }
+  .popup-content p {
+    font-size: .7rem;
+    margin: .5rem 0;
+  }
+  .popup-content a {
+    font-size: 2.5rem;
+  }
+
+  .popup-content .close {
+    font-size: 2.5rem;
+    background: rgba(255, 255, 255, 0.829);
+    border-radius: 0 0 0 10px;
+    padding: 10px;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+  }
+  .service-card {
+    padding: 0;
+  }
+  .service-card p {
+    margin: .2rem 0;
+    font-size: .7rem;
+  }
+  .service-card h4 {
+    margin: .2rem 0;
+  }
+  .popup-content ul {
+    font-size: .7rem;
+    margin: .2rem 0;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: .7rem;
+    margin: .5rem 0;
+  }
+  .text-footer {
+    font-size: 0.46rem;
+  }
+}
+
+/* Menor ainda */
+@media (max-width: 321px) {
+  .text-section {
+    margin: .5rem 0 0 0;
+  }
+  .text-section h1 {
+    font-size: .8rem;
+  }
+  .text-section span {
+    font-size: 1rem;
+  }
+  .image-section {
+    max-width: 80px;
+  }
+  .propaganda h3 {
+    font-size: .7rem;
+    margin: 1rem 0 0 0;
+  }
+  .propaganda p {
+    font-size: .6rem;
+    margin: .6rem 0 0 0;
+  }
+  .propaganda h5 {
+    font-size: .4rem;
+    margin: .8rem 0 0 0;
+  } 
+
+  .button button {
+    font-size: .7rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0 1.1rem 0;
+  }
+
+  .links {
+    gap: 1.3rem;
+  }
+
+  .links a {
+    font-size: .6rem;    
+  }
+
+  .popup-content {
+    padding: 1rem;
+    font-size: 0.8rem;
+    max-width: 90%;
+    max-height: 90vh;
+  }
+  .popup-content h2 {
+    font-size: .7rem;
+    margin: 4rem 0 1rem 0;
+  }
+  .popup-content h3 {
+    font-size: .5rem;
+    margin: .2rem 0;
+  }
+  .popup-content h4 {
+    font-size: .5rem;
+  }
+  .popup-content p {
+    font-size: .6rem;
+    margin: .3rem 0;
+  }
+  .popup-content a {
     font-size: 2rem;
   }
 
-  .text-section p {
-    font-size: 1.3rem;
-  }
-
-  .button button {
-    font-size: 1.2rem;
-    padding: 0.5rem 1rem;
-  }
-
-  .links {
-    gap: 1.5rem;
-  }
-
-  .links a {
-    font-size: 1rem;    
-  }
-
-  .image-section img {
-    max-width: 220px;
-  }
-
-  .popup-content {
-    padding: 1rem;
-    font-size: 0.8rem;
-  }
-  .popup-content h2 {
-    font-size: 1.5rem;
-  }
-  .popup-content p {
-    font-size: 1rem;
-    margin: 10px 0;
-  }
-  .popup-content a {
-    font-size: 3rem;
-  }
-
   .popup-content .close {
-    font-size: 3.5rem;
+    font-size: 2rem;
+    background: rgba(255, 255, 255, 0.829);
+    border-radius: 0 0 0 10px;
+    padding: 10px;
+    right: 0;
+    top: 0;
+    overflow: hidden;
   }
-  .text-footer {
-    font-size: 0.5rem;
+  .service-card {
+    padding: 0;
   }
-}
-/* Menor ainda */
-@media (max-width: 320px) {
-    .container {
-    justify-content: space-between;
+  .service-card p {
+    margin: .2rem 0;
+    font-size: .5rem;
   }
-  .text-section {
-    flex-direction: column;
-    margin: 0;
+  .service-card h4 {
+    margin: .4rem 0;
   }
-
-  .text-section h1 {
-    font-size: 1.5rem;
+  .popup-content ul {
+    font-size: .5rem;
+    margin: .2rem 0;
   }
-
-  .button button {
-    font-size: 1.1rem;
-    padding: 0.5rem 1rem;
-  }
-
-  .links {
-    gap: 1.5rem;
-  }
-
-  .links a {
-    font-size: 0.9rem;    
-  }
-
-  .image-section img {
-    max-width: 220px;
-  }
-
-  .popup-content {
-    padding: 1rem;
-    font-size: 0.8rem;
-  }
-  .popup-content h2 {
-    font-size: 1.5rem;
-  }
-  .popup-content p {
-    font-size: 1rem;
-    margin: 10px 0;
-  }
-  .popup-content a {
-    font-size: 3rem;
-  }
-
-  .popup-content .close {
-    font-size: 3.5rem;
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: .7rem;
+    margin: .5rem 0;
   }
   .text-footer {
     font-size: 0.4rem;
   }
-
 }
+
+
