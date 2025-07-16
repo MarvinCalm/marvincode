@@ -4,7 +4,8 @@ function openPopup(section) {
 
   if (section === 'contact') {
     popupBody.innerHTML = `
-      <h2>Entre em Contato</h2>
+      <img class="project-image" src="images/capa-contato.svg" alt="Banner contato">
+      <br><br>
       <a title="E-mail" target="_blank" href="mailto:viniiciussd@hotmail.com?subject=Olá&body=Vim pelo site e quero saber mais sobre seus serviços.">
         <i class="fa-solid fa-envelope"></i>
       </a> 
@@ -17,7 +18,7 @@ function openPopup(section) {
     `;
   } else if (section === 'about') {
     popupBody.innerHTML = `
-      <h2>SOBRE MIM</h2>
+      <img class="project-image" src="images/capa-sobre.svg" alt="Banner Sobre Mim">
       <p>Olá! Sou MarvinCode, um desenvolvedor web iniciante apaixonado por transformar ideias em realidade digital. Com foco em HTML5, CSS3 e JavaScript, crio soluções web simples, porém eficazes e visualmente atraentes. Meu objetivo é ajudar pequenos negócios e indivíduos a estabelecerem sua presença online com qualidade e acessibilidade.</p>
       
       <p>Como iniciante na área, dedico-me a cada projeto com entusiasmo e atenção aos detalhes, garantindo que o resultado final atenda às suas expectativas e necessidades. Acredito que a simplicidade pode ser poderosa, e meu trabalho reflete essa filosofia, entregando projetos limpos, funcionais e fáceis de usar.</p>
@@ -26,7 +27,7 @@ function openPopup(section) {
     `;
   } else if (section === 'services') {
     popupBody.innerHTML = `
-      <h2>MEUS SERVIÇOS</h2>
+      <img class="project-image" src="images/capa-servicos.svg" alt="Banner de Serviços">
       <p>Ofereço soluções de desenvolvimento web sob medida para suas necessidades, com foco em projetos simples e eficazes, ideais para quem está começando ou busca uma presença online direta e funcional.</p>
       
       <div class="services-grid">
@@ -58,9 +59,9 @@ function openPopup(section) {
     `;
   } else if (section === 'projects') {
     popupBody.innerHTML = `
-      <img class="project-image" src="images/capa-marvincode.svg" alt="Exemplo de Landing Page">
+      <img class="project-image" src="images/capa-projetos.svg" alt="Banner de Projetos">
       <p>Aqui estão alguns dos projetos que desenvolvi, demonstrando minhas habilidades em HTML5, CSS3 e JavaScript. Cada projeto foi criado com foco em funcionalidade, design responsivo e experiência do usuário.</p>
-
+      <hr>
       <h4>Loja Deblando Mais Som - deblandomais.com.br</h4>
       <p>Site criado para a Loja Deblando Mais Som, com o objetivo de apresentar produtos e serviços de som automotivo, acessórios e instalações. A plataforma destaca ofertas, contatos e redes sociais, proporcionando uma navegação simples e moderna para atrair clientes e facilitar o atendimento.</p>
       <a title="Confira! - deblandomais.com.br" href="https://deblandomais.com.br/" target="_blank"><img class="project-image" src="images/deblandomais.jpg" alt=Página Web da Loja Deblando Mais Som"></a>
@@ -75,6 +76,22 @@ function openPopup(section) {
 function closePopup() {
   document.getElementById('popup').classList.add('hidden');
 }
+
+
+// CARROSSEL DE IMAGENS
+let index = 0;
+  const slides = document.querySelectorAll('.propaganda-web');
+  const total = slides.length;
+
+  function mostrarSlide() {
+    slides.forEach(slide => slide.classList.remove('ativo'));
+    slides[index].classList.add('ativo');
+    index = (index + 1) % total;
+  }
+
+  setInterval(mostrarSlide, 7000); // troca a cada 7 segundos
+//
+
 
 // SCROLLREVEAL
 ScrollReveal().reveal('h1', {
@@ -98,11 +115,9 @@ ScrollReveal().reveal('.propaganda', {
     distance: '20%',
     reset: true
 });
-ScrollReveal().reveal('.propaganda-web', {
-    origin: 'bottom',
+ScrollReveal().reveal('.slides', {
     duration: 1900,
-    delay: 1500,      
-    distance: '20%',
+    delay: 2000,
     reset: true
 });
 ScrollReveal().reveal('.button', {
@@ -113,8 +128,8 @@ ScrollReveal().reveal('.button', {
     reset: true
 });
 ScrollReveal().reveal('.links', {
-    duration: 1300,
-    delay: 3300,
+    duration: 1500,
+    delay: 3500,
     reset: true
 });
 

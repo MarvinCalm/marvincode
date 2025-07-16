@@ -1,10 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Share+Tech+Mono&display=swap');
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   background: radial-gradient(#0d0d1a 65%, #00004e);
   color: white;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: #00004eb0;
+  margin: 1.5rem 2rem;
 }
 
 .container {
@@ -14,12 +20,14 @@ body {
   align-items: center;
   height: 100vh;
   padding: 0 5%;
+  
 }
 
 .text-section {
   display: flex;
   margin: 0 0 .9rem 0;
   align-items: center;
+  
 }
 
 .text-section h1 {
@@ -41,47 +49,69 @@ body {
   filter: drop-shadow(5px 5px 10px rgba(0, 0, 27, 0.918));
 }
 
+.carrossel {
+  width: 100%;
+  max-width: 950px;
+  height: auto;
+  margin-bottom: 18rem;
+}
+.slides {
+  position: relative;
+  width: 100%;
+  height: 100%;  
+}
+
 .propaganda {  
-  color: #fff;
+  color: #ffffff;
   text-align: center;
-  border-radius: 10px;
-  margin: 0 0 .5rem 0;
-  max-width: 850px;
-  filter: drop-shadow(5px 5px 10px rgba(0, 0, 27, 0.918));
+  /* border-radius: 5px; */
+  border-top: 1px solid #ffffffad;
+  padding: 1.1rem .5rem;
+  margin: 1rem 0 .5rem 0;
+  max-width: 950px;
+  /* filter: drop-shadow(1px 1px 1px rgba(255, 255, 255, 0.308)); */
+  
 }
 .propaganda h3 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   margin: .6rem 0 0 0 ;
 }
 .propaganda p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin: .4rem 0 0 0;
   line-height: 1.3;
-  font-weight: 500;
+  font-weight: 300;
+  text-align: center;
 }
-
-
 
 .propaganda-web {
-  border-radius: 10px;
-  border: 1px solid #ffffff;
-  max-width: 850px;
+  position: absolute;
   width: 100%;
   height: auto;
-  filter: drop-shadow(5px 5px 10px rgba(0, 0, 27, 0.918));
+  opacity: 0;
+  border-radius: 10px;
+  border: 3px solid #ffffffea;   
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 27, 0.733));
+  transition: opacity 1s ease-in-out;
 }
+
+.propaganda-web.ativo {
+  opacity: 1;
+  z-index: 1;
+}
+
 
 .button button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  margin: 1.5rem 0;
+  margin: 1.8rem 0 1rem 0;
   font-size: 1.6rem;
   border: 2px solid white;
   background: none;
   color: white;
   cursor: pointer;
   border-radius: 5px;
-  font-family: "Press Start 2P", system-ui;
+  font-family: "Share Tech Mono", monospace;
   text-shadow: 5px 5px 2px #1c1c5e;
   transition: all 0.2s ease-in-out;  
 }
@@ -92,7 +122,7 @@ body {
 .links {
   display: flex;
   gap: 2.3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .links a {
@@ -100,7 +130,6 @@ body {
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 500;
-  font-family: "Press Start 2P", system-ui;
   text-shadow: 5px 5px 2px #1c1c5e;
   transition: transform 0.3s ease-in-out;
 }
@@ -118,6 +147,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  display: flex;
+  flex-direction: column;
   z-index: 10;
 }
 
@@ -166,9 +197,9 @@ body {
 .popup-content p {
  text-align: justify;
  text-indent: 20px;
- margin: 15px 40px;
+ margin: 20px 100px;
  line-height: 1.5;
- font-size: 1.1rem;
+ font-size: 1.3rem;
  font-weight: 500;
  justify-content: center;
 }
@@ -186,21 +217,29 @@ body {
 
 .popup-content a {
   color: #000036;
-  font-size: 4rem;
-  margin: 0 .5rem;
+  font-size: 5rem;
+  margin: 0 1rem;
   text-decoration: none;
 }
 .popup-content a:hover {
-  color: #000036e7;
+  color: #000036c9;
 }
 
 .popup-content .close {
   position: absolute;
   top: 0;
-  right: 8px;
+  right: 0;
   cursor: pointer;
-  font-size: 4rem;
-  z-index: 999;
+  font-size: 3.5rem;
+  z-index: 999;  
+  background: rgba(255, 255, 255, 0.76);
+  border-radius: 0 0 0 10px;
+  padding: 8px;    
+  overflow: hidden;
+}
+.popup-content .close:hover {
+  background: #000036;
+  color: #fff;
 }
 
 .hidden {
@@ -208,11 +247,11 @@ body {
 }
 
 .project-image {
-  border-radius: 10px;
-  width: 95%;
+  border-radius: 8px;
+  width: 85%;
   margin: 10px 2px;
-  max-width: 600px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  max-width: 650px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
 }
 
 .services-grid {
@@ -303,11 +342,15 @@ canvas#spotlight {
     font-size: 2rem;
   }
   .image-section {
-    max-width: 150px;
+    max-width: 130px;
+  }
+  .propaganda {
+    margin: 0;
+    padding: 0.6rem .2rem;
   }
   .propaganda h3 {
     font-size: 1.2rem;
-    margin: 1rem 0 0 0;
+    margin: .2rem 0 .3rem 0;
   }
   .propaganda p {
     font-size: .9rem;
@@ -384,7 +427,7 @@ canvas#spotlight {
     margin: .5rem 0;
   }
   .text-footer {
-    font-size: .8rem;
+    font-size: .7rem;
   }
 }
 
@@ -410,6 +453,9 @@ canvas#spotlight {
   .propaganda p {
     font-size: 1.2rem;
     margin: .8rem 0 1.5rem 0;
+  }
+  .carrossel {
+    margin-bottom: 15rem;
   }  
 
   .button button {
@@ -508,6 +554,9 @@ canvas#spotlight {
   .propaganda p {
     font-size: 1.1rem;
     margin: .8rem 0 1.5rem 0;
+  }
+  .carrossel {
+    margin-bottom: 14rem;
   }  
 
   .button button {
@@ -580,7 +629,7 @@ canvas#spotlight {
     margin: .5rem 0;
   }
   .text-footer {
-    font-size: 1rem;
+    font-size: .9rem;
   }
 }
 
@@ -597,18 +646,23 @@ canvas#spotlight {
     font-size: 1.4rem;
   }
   .image-section {
-    max-width: 100px;
+    max-width: 85px;
+  }
+  .propaganda {
+    margin: 0;
+    padding: .6rem;
   }
   .propaganda h3 {
-    font-size: .9rem;
-    margin: 1.5rem 0 1rem 0;
+    font-size: .8rem;
+    margin: .8rem 0 .4rem 0;
   }
   .propaganda p {
     font-size: .8rem;
-    margin: 0;
-    margin: 0 0 1rem 0;
+    margin: 0 0 .5rem 0;
   } 
-
+  .carrossel {
+    margin-bottom: 8rem;
+  }
   .button button {
     font-size: .9rem;
     padding: 0.5rem 1rem;
@@ -628,6 +682,7 @@ canvas#spotlight {
     font-size: 0.8rem;
     max-width: 90%;
     max-height: 90vh;
+    justify-content: center;
   }
   .popup-content h2 {
     font-size: .9rem;
@@ -649,9 +704,7 @@ canvas#spotlight {
   }
 
   .popup-content .close {
-    font-size: 2.5rem;
-    background: rgba(255, 255, 255, 0.829);
-    border-radius: 0 0 0 10px;
+    font-size: 1.9rem;
     padding: 10px;
     right: 0;
     top: 0;
