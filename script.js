@@ -96,7 +96,7 @@ let index = 0;
 // SCROLLREVEAL
 ScrollReveal().reveal('h1', {
     origin: 'top',
-    duration: 1200,
+    duration: 1000,
     delay: 500,
     distance: '20%',
     reset: true
@@ -109,15 +109,13 @@ ScrollReveal().reveal('.image-section', {
     reset: true
 });
 ScrollReveal().reveal('.propaganda', {
-    origin: 'top',
     duration: 1900,
-    delay: 1500,      
-    distance: '20%',
+    delay: 1500,
     reset: true
 });
 ScrollReveal().reveal('.slides', {
     duration: 1900,
-    delay: 2000,
+    delay: 2500,
     reset: true
 });
 ScrollReveal().reveal('.button', {
@@ -138,7 +136,7 @@ ScrollReveal().reveal('.links', {
 
 
 
-// ANIMAÇÃO
+// ANIMAÇÃO bolhas de fundo
 
 const canvas = document.getElementById('spotlight');
 const ctx = canvas.getContext('2d');
@@ -201,7 +199,7 @@ class FadingBall {
 }
 
 // ANIMAÇÃO FUNDO - BOLHAS
-const balls = Array.from({ length: 4 }, () => new FadingBall());
+const balls = Array.from({ length: 8 }, () => new FadingBall());
 
 function animate() {
   ctx.clearRect(0, 0, width, height);
@@ -213,4 +211,17 @@ function animate() {
 }
 
 animate();
+
+
+
+
+// Tela de carregamento
+
+window.addEventListener("load", function () {
+  const loader = document.getElementById("loader");
+  const content = document.getElementById("content");
+
+  loader.style.display = "none";
+  content.style.display = "block";
+});
 

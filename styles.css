@@ -9,9 +9,54 @@ body {
 hr {
   border: none;
   height: 2px;
-  background-color: #00004eb0;
+  background-color: #ffffff85;
   margin: 1.5rem 2rem;
 }
+
+/* TELA DE CARREGAMENTO */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(#0d0d1a 65%, #00004e);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;  
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+/* Estilo dos pontos */
+.dot {
+  opacity: 0;
+  animation: aparecer 1s infinite;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.dot:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+/* Animação */
+@keyframes aparecer {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+
 
 .container {
   display: flex;
@@ -43,7 +88,7 @@ hr {
 }
 .image-section {
   border-radius: 50%;
-  max-width: 180px;
+  max-width: 150px;
   width: 100%;
   height: auto;
   filter: drop-shadow(5px 5px 10px rgba(0, 0, 27, 0.918));
@@ -64,35 +109,34 @@ hr {
 .propaganda {  
   color: #ffffff;
   text-align: center;
-  /* border-radius: 5px; */
-  border-top: 1px solid #ffffffad;
   padding: 1.1rem .5rem;
-  margin: 1rem 0 .5rem 0;
+  margin: 3rem 0 .5rem 0;
   max-width: 950px;
   /* filter: drop-shadow(1px 1px 1px rgba(255, 255, 255, 0.308)); */
   
 }
 .propaganda h3 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   margin: .6rem 0 0 0 ;
 }
 .propaganda p {
-  font-size: 1.3rem;
-  margin: .4rem 0 0 0;
-  line-height: 1.3;
-  font-weight: 300;
+  font-size: 1.2rem;
+  margin: .3rem 0 0 0;
+  line-height: 1.2;
+  font-weight: 400;
   text-align: center;
 }
 
+/* IMAGEM DE PROPAGANDA */
 .propaganda-web {
   position: absolute;
   width: 100%;
   height: auto;
   opacity: 0;
   border-radius: 10px;
-  border: 3px solid #ffffffea;   
+  border: 2px solid #ffffffea;   
   filter: drop-shadow(2px 2px 5px rgba(0, 0, 27, 0.733));
-  transition: opacity 1s ease-in-out;
+  transition: opacity 1.2s ease-in-out;
 }
 
 .propaganda-web.ativo {
@@ -104,7 +148,7 @@ hr {
 .button button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  margin: 1.8rem 0 1rem 0;
+  margin: 2.2rem 0 1rem 0;
   font-size: 1.6rem;
   border: 2px solid white;
   background: none;
@@ -153,8 +197,8 @@ hr {
 }
 
 .popup-content {
-  background: rgba(255, 255, 255, 0.911);
-  color: #000036;
+  background: linear-gradient(#0d0d1ae1 50%, #00004ee1);
+  color: #ffffff;
   padding: 2rem;
   max-width: 1200px;
   width: 100%;
@@ -165,13 +209,12 @@ hr {
   align-items: center;
   justify-content: center;
   text-align: center;
-  border: 1px #000036 solid;
+  border: 1px #ffffff solid;
   max-height: 90vh;
   overflow-y: auto;
 }
 
-.popup-content h2 {
-  font-family: "Press Start 2P", system-ui;
+.popup-content h2 {  
   justify-content: center;
   text-align: center;
   margin: 2rem 0;
@@ -183,7 +226,7 @@ hr {
   font-weight: bold;
   margin: 1.5rem 0 0.5rem 0;
   font-size: 1.4rem;
-  color: #000036;
+  color: #ffffff;
 }
 
 .popup-content h4 {
@@ -191,7 +234,7 @@ hr {
   font-weight: bold;
   margin: 2rem 0 0.5rem 0;
   font-size: 1.4rem;
-  color: #000036;
+  color: #ffffff;
 }
 
 .popup-content p {
@@ -216,13 +259,13 @@ hr {
 }
 
 .popup-content a {
-  color: #000036;
+  color: #ffffff;
   font-size: 5rem;
   margin: 0 1rem;
   text-decoration: none;
 }
 .popup-content a:hover {
-  color: #000036c9;
+  color: #ffffffda;
 }
 
 .popup-content .close {
@@ -232,14 +275,15 @@ hr {
   cursor: pointer;
   font-size: 3.5rem;
   z-index: 999;  
-  background: rgba(255, 255, 255, 0.76);
+  background: #000036;
+  border: 1px solid #ffffff;
   border-radius: 0 0 0 10px;
   padding: 8px;    
   overflow: hidden;
 }
 .popup-content .close:hover {
-  background: #000036;
-  color: #fff;
+  background: #ffffff;
+  color: #000036;
 }
 
 .hidden {
@@ -248,6 +292,7 @@ hr {
 
 .project-image {
   border-radius: 8px;
+  border: 1px solid #ffffff;
   width: 85%;
   margin: 10px 2px;
   max-width: 650px;
@@ -263,8 +308,8 @@ hr {
 }
 
 .service-card {
-  background: rgba(255, 255, 255, 0.281);
-  border: 1px solid rgba(255, 255, 255, 0.39);
+  background: rgba(255, 255, 255, 0.11);
+  border: 1px solid rgba(255, 255, 255, 0.432);
   border-radius: 10px;
   padding: 1.5rem;
   text-align: center;
@@ -276,12 +321,12 @@ hr {
 }
 
 .service-card h4 {
-  color: #000036;
+  color: #ffffff;
   margin-bottom: 1rem;
 }
 
 .service-card p {
-  color: #000036;
+  color: #ffffff;
   font-size: 1rem;
   text-align: center;
   text-indent: 0;
@@ -312,7 +357,7 @@ canvas#spotlight {
   line-height: .8;
   font-size: 13px;
   filter: drop-shadow(5px 5px 10px rgba(0, 0, 27, 0.918));
-  animation: aparecerFooter 5s ease-out;
+  animation: aparecerFooter 10s ease-out;
 }
 
 @keyframes aparecerFooter {
@@ -398,12 +443,7 @@ canvas#spotlight {
 
   .popup-content .close {
     font-size: 2.5rem;
-    background: rgba(255, 255, 255, 0.829);
-    border-radius: 0 0 0 10px;
     padding: 10px;
-    right: 0;
-    top: 0;
-    overflow: hidden;
   }
   .service-card {
     padding: 0;
@@ -433,18 +473,21 @@ canvas#spotlight {
 
 /* Responsividade para tablets médios */
 @media (max-width: 992px) {
+  #loader {
+    font-size: 2rem;
+  }
   .text-section {
-    margin: .9rem 0 0 0;
+    margin: .9rem 0 1.3rem 0;
   }
 
   .text-section h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   .text-section span {
     font-size: 2.5rem;
   }
   .image-section {
-    max-width: 180px;
+    max-width: 160px;
   }
   .propaganda h3 {
     font-size: 1.5rem;
@@ -459,7 +502,7 @@ canvas#spotlight {
   }  
 
   .button button {
-    font-size: 1.7rem;
+    font-size: 2rem;
     padding: 0.5rem 1rem;
     margin: 2.5rem 0 1.5rem 0;
   }
@@ -469,7 +512,7 @@ canvas#spotlight {
   }
 
   .links a {
-    font-size: 1.2rem;    
+    font-size: 1.4rem;    
   }
 
   .popup-content {
@@ -499,12 +542,7 @@ canvas#spotlight {
 
   .popup-content .close {
     font-size: 2.5rem;
-    background: rgba(255, 255, 255, 0.829);
-    border-radius: 0 0 0 10px;
     padding: 10px;
-    right: 0;
-    top: 0;
-    overflow: hidden;
   }
   .service-card {
     padding: 0;
@@ -533,34 +571,37 @@ canvas#spotlight {
 }
 
 /* Responsividade para celulares grandes */
-@media (max-width: 768px) {
+@media (max-width: 769px) {
+  #loader {
+    font-size: 1.4rem;
+  }
   .text-section {
-    margin: .8rem 0 0 0;
+    margin: .4rem 0 .8rem 0;
   }
 
   .text-section h1 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   .text-section span {
     font-size: 2rem;
   }
   .image-section {
-    max-width: 150px;
+    max-width: 130px;
   }
   .propaganda h3 {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     margin: 2rem 0 0 0;
   }
   .propaganda p {
-    font-size: 1.1rem;
-    margin: .8rem 0 1.5rem 0;
+    font-size: 1.2rem;
+    margin: .8rem 0 1rem 0;
   }
   .carrossel {
     margin-bottom: 14rem;
   }  
 
   .button button {
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding: 0.5rem 1rem;
     margin: 2.5rem 0 1.5rem 0;
   }
@@ -570,7 +611,7 @@ canvas#spotlight {
   }
 
   .links a {
-    font-size: 1.1rem;    
+    font-size: 1.4rem;    
   }
 
   .popup-content {
@@ -595,17 +636,12 @@ canvas#spotlight {
     margin: .5rem 0;
   }
   .popup-content a {
-    font-size: 2.5rem;
+    font-size: 4rem;
   }
 
   .popup-content .close {
     font-size: 2.5rem;
-    background: rgba(255, 255, 255, 0.829);
-    border-radius: 0 0 0 10px;
     padding: 10px;
-    right: 0;
-    top: 0;
-    overflow: hidden;
   }
   .service-card {
     padding: 0;
@@ -635,38 +671,41 @@ canvas#spotlight {
 
 /* Responsividade para celulares pequenos */
 @media (max-width: 520px) {
+  #loader {
+    font-size: 1.2rem;
+  }
   .text-section {
-    margin: .4rem 0 1rem 0;
+    margin: .3rem 0 1.2rem 0;
   }
 
   .text-section h1 {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   .text-section span {
     font-size: 1.4rem;
   }
   .image-section {
-    max-width: 85px;
+    max-width: 90px;
   }
   .propaganda {
     margin: 0;
     padding: .6rem;
   }
   .propaganda h3 {
-    font-size: .8rem;
-    margin: .8rem 0 .4rem 0;
+    font-size: .9rem;
+    margin: 1.3rem 0 .4rem 0;
   }
   .propaganda p {
-    font-size: .8rem;
-    margin: 0 0 .5rem 0;
+    font-size: .78rem;
+    margin: 0 0 .2rem 0;
   } 
   .carrossel {
     margin-bottom: 8rem;
   }
   .button button {
-    font-size: .9rem;
+    font-size: 1.2rem;
     padding: 0.5rem 1rem;
-    margin: 2rem 0 1rem 0;
+    margin: 1rem 0 1rem 0;
   }
 
   .links {
@@ -674,7 +713,7 @@ canvas#spotlight {
   }
 
   .links a {
-    font-size: .6rem;    
+    font-size: .8rem;    
   }
 
   .popup-content {
@@ -704,11 +743,8 @@ canvas#spotlight {
   }
 
   .popup-content .close {
-    font-size: 1.9rem;
-    padding: 10px;
-    right: 0;
-    top: 0;
-    overflow: hidden;
+    font-size: 1.8rem;
+    padding: 7px;
   }
   .service-card {
     padding: 0;
@@ -803,12 +839,7 @@ canvas#spotlight {
 
   .popup-content .close {
     font-size: 2rem;
-    background: rgba(255, 255, 255, 0.829);
-    border-radius: 0 0 0 10px;
     padding: 10px;
-    right: 0;
-    top: 0;
-    overflow: hidden;
   }
   .service-card {
     padding: 0;
